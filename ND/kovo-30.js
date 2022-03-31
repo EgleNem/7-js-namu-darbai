@@ -214,24 +214,16 @@ if (n>0) {
 
 /*2. Mokinys eina gatve ir prieina sankryžą reguliuojamą šviesoforu. Sudarykite programą, kuri nustatytu, kaip turi pasielgti mokinys? Žinome šviesoforo spalvos kodą n, 1-žalia, 2- geltona, 3-raudona. Pasitikrinkite: Kai n= 2, turėtume gauti: Palaukite.*/
 
-const zalia = 1;
-const geltona = 2;
-const raudona = 3;
+let s = 2;
 
-let s = geltona;
-
-if (s=2) {
+if (s===2) {
     console.log('Palaukite');
     
-}
-if (s=1) {
+} else if (s===1) {
     console.log('Eikite');
-    
-}
-if (s=3) {
-    console.log('Stop');
-    
-}
+} else 
+    console.log('Sustokite');
+
 
 //3. Gintautas planuoja persikraustyti į naujus namus ir jam reikia sudėti visas turimas knygas į dėžes. Gintautas turi d dėžių ir k knygų. Parašykite programą, kuri apskaičiuotų, ar Gintauto turimos knygos tilps į dėžes, jei į vieną dėžę telpa po n knygų. Pasitikrinkite: Kai d=2, k=8, n=5 tuomet ekrane turi būti rodomas pranešimas: Knygos telpa į dėžes; kai d=3, k=18, n=5 tuomet ekrane turi būti rodomas pranešimas: Knygos netelpa į dėžes.
 
@@ -247,24 +239,30 @@ else {console.log('Knygos netelpa i dezes');
 
 //4. Duoti du sveikieji skaičiai a ir b. Parašykite programą, kuri didesnį skaičių pamažintu vienetu, o mažesnį padidintu vienetu.
 
-let aa = 6;
-let bb = 3;
+let aa = 2;
+let bb = 10;
 
-if (aa>bb) { console.log(--aa, ++bb);
+if (aa>bb) { 
+    console.log(--aa, ++bb);
     
+} else if (bb>aa) {
+    console.log(--bb, ++aa);
 }
-//5. Saulius sutaupė c centų ir už juos nusprendė nusipirkti ledų. Parduotuvėje porcija ledų kainuoja p centų. Parašykite programą, kuri suranda, kiek porcijų ledų k nusipirks Saulius ir kiek centų m dar liks. Pasitikrinkite Kai c=50, p=20, turi būti : Saulius nusipirks 2 porcijas, liks centų 10. Gali prireikti panaudoti Math.floor() funkciją.
-// c- pradines suma
+
+
+
+//5. Saulius sutaupė c centų ir už juos nusprendė nusipirkti ledų. Parduotuvėje porcija ledų kainuoja p centų. 
+//Parašykite programą, kuri suranda, kiek porcijų ledų k nusipirks Saulius ir kiek centų m dar liks. Pasitikrinkite Kai c=50, p=20, turi būti : Saulius nusipirks 2 porcijas, liks centų 10. Gali prireikti panaudoti Math.floor() funkciją.
+// c- pradine suma
 // p - ledu kaina
 // k - porcijos
 // m - graza
+const cc = 50;
+const pp= 20; 
+const kk = Math.floor (cc/pp)
+console.log(kk);
+const m = cc % pp;
+console.log(m);
 
-//let z = Math.floor(0.60);
-const c= 50;
-const p = 20;
-//m = c - p*k 
-console.log(c/p);
+console.log(`Saulius nusipirks ${kk} porcijas, liks ${m} centu`);
 
-const k = Math.floor(c/p);
-const mm = c % p;
-console.log(`Saulius nusipirks ${k} porcijas, liks centu ${mm}.`);
