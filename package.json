@@ -113,7 +113,7 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
-    "dev": "nodemon ./nd/balandzio-4-mentoriaus.js",
+    "dev": "nodemon ./nd/balandzio-5-mentoriaus.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

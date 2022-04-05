@@ -15,10 +15,11 @@ console.log("---3---");
 //3 Naudojant ciklą penkiose eilutėse atspausdinti skaičius 0 10 20 30 40 (vienas skaičius
 //vienoje eilutėje).
 
-skaicius = 0;
-for (let i = 0; i < 5; i++) {
-  console.log(skaicius);
-  skaicius += 10;
+
+for (let i = 0; i < 50; i+=10) {
+  
+  console.log(i);
+  
 }
 
 console.log("---4---");
@@ -28,20 +29,19 @@ console.log("---4---");
 for (let i = 49; i <= 53; i++) {
   console.log(i);
 }
-skaicius = 49;
-for (let i = 0; i < 5; i++) {
-  console.log(skaicius);
-  skaicius += 1;
-}
+
 
 console.log("---5---");
-/*//5  Naudojant ciklą penkiose eilutėse atspausdinti skirtingus atsitiktinius skaičius nuo 0 iki 10 (vienas skaičius vienoje eilutėje).
+/*5  Naudojant ciklą penkiose eilutėse atspausdinti skirtingus atsitiktinius skaičius nuo 0 iki 10 (vienas skaičius vienoje eilutėje).*/
 
-for (let i = 0; i < 10; i++) {
-    console.log(Math.floor(Math.random(i)));
-    i+=;
-}*/
 
+function rand(min, max) {
+  min = 0;
+  max=10;
+  Return (Math.floor(rand*(max-min+1)+min));
+  }
+  
+  
 console.log("---6---");
 //Naudojant ciklą, atspausdinti skaičius nuo 1 iki 20. Nespausdinti skaičių, kurie dalinasi iš
 //3.
@@ -53,6 +53,7 @@ console.log("---7---");
 let ivestasSkaicius = 4;
 let daugiklis = 0;
 for (let i = 0; i < 10; i++) {
-    daugiklis++;
     let rezultatas = ivestasSkaicius * daugiklis;
     console.log(rezultatas);}
+
+    console.log("---8---");
