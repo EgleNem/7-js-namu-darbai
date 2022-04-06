@@ -11,8 +11,9 @@ for (let i = 1; i < n; i++) {
 
 console.log('-----9-----');
 let ind=100;
+let p = 0.02
 for (let m = 1; m < n; m++) {
-    let p = 0.02;
+    
     ind= ind + ind*p;
     
     console.log(`${m} metais palukanos bus ${p}, indelis bus  ${ind}`);
@@ -22,7 +23,19 @@ console.log('-----10-----');
 /* Keliamieji metai turi 366 dienas, paprastieji – 365. Visi metai, išskyrus šimtmečius, yra
 keliamieji, jie dalūs iš 4. Šimtmečių metai yra keliamieji, jeigu dalūs 400. Pvz.: 1600 metai yra keliamieji, nes dalūs iš 400, o 1700 – paprastieji. Raskite visus mūsų eros keliamuosius metus.
 */
-for (let m = 0; m < 2022; m++) {
-     if ( m % 4  === 0 || m%400===0) ;
-     console.log(m);
-}  
+
+/*
+for (m = 0; m <= 2022; m++) {
+    ( (m % 4 === 0) || ( m % 400 === 0) && (m % 100 === 0) {
+    console.log(m);
+    }
+  
+} 
+*/
+let indelis = 100;
+let palukanos = 0;
+let metai = 1;
+for (i = 1; i <= 20; i++) {
+    palukanos += 0.02 * indelis;
+    console.log(`Metai: ${metai++} / Palukanos: ${palukanos}e / Indelis: ${indelis + palukanos}e`);
+}

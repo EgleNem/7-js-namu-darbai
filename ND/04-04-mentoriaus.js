@@ -34,13 +34,10 @@ for (let i = 49; i <= 53; i++) {
 console.log("---5---");
 /*5  Naudojant ciklą penkiose eilutėse atspausdinti skirtingus atsitiktinius skaičius nuo 0 iki 10 (vienas skaičius vienoje eilutėje).*/
 
-
-function rand(min, max) {
-  min = 0;
-  max=10;
-  Return (Math.floor(rand*(max-min+1)+min));
-  }
-  
+  console.log('----45--4-5----');
+  for (i = 0; i < 5; i++) {
+    console.log(Math.floor(Math.random()*10));
+}
   
 console.log("---6---");
 //Naudojant ciklą, atspausdinti skaičius nuo 1 iki 20. Nespausdinti skaičių, kurie dalinasi iš
