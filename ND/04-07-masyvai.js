@@ -1,6 +1,13 @@
 console.log('------1------');
-// 1. Sukurti masyą, kurio ilgis 20, o reikšmės – skaičiai, nuo 1 iki 20.
+// 1. Sukurti masyvą, kurio ilgis 20, o reikšmės – skaičiai, nuo 1 iki 20.
 
+
+ for (let i = 0; i < 20; i++) {
+     const skaiciai = Array[i];
+     i++
+   i = Math.floor(Math.random() * 11);
+    console.log(i);
+ } return [i]
 
 console.log('------2------');
 // 2. Sukurti atsitiktinio ilgio masyvą, nuo 40 iki 60, kurio reikšmės būtų skaičiai nuo 1 iki masyvo ilgio.
