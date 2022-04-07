@@ -80,62 +80,28 @@ console.log(s2);
 console.log("---6---");
 //6. Parašykite funkciją, kuri priimtų skaičių ir suskaičiuotų, iš kiek sveikų skaičių jos
 //argumentas dalijasi be liekanos (išskyrus vienetą ir patį save).
-/*
-function liekanosSkaiciavimas(b) {
-    let n=2;
-       
-        for (let n = 2; n <b; n++) {
-            ilgis = n.length;
-            if (b%n===0){
 
-        } return ` Skaicius ${b} dalijasi is ${ilgis} sveiku skaiciu.`
-
+function dalinasiIsSveikujuSkaiciu(a) {
+  if (typeof a !== "number" || !isFinite(a)) {
+    return "Error, funckija priima tik sveikuosius skaicius";
+  }
+  let dalikliai = 0;
+  for (let i = 2; i < a; i++) {
+    if (a % i === 0) {
+      dalikliai++;
+    } else {
+      continue;
     }
-    
-}
-let b1 = liekanosSkaiciavimas(6);
-console.log(b1);
-
-console.log('DOVES');
-
-skaicius = -20;
-if (skaicius > 0) {
-kiekSveiku = -1;
-for(let i = 0; i < skaicius; i++) {
-    if(skaicius % i === 0){
-        kiekSveiku++;
-    }
-}
-// console.log(kiekSveiku);
-} else {
-    kiekSveiku = 0;
-    for(let i = skaicius; i <= 0; i++) {
-        if(skaicius % i === 0 && i !== skaicius && i !== -1){
-            kiekSveiku++
-        }
-    }
-    console.log(kiekSveiku);
+  }
+  return `Skaiciaus ${a} sveikuju dalikliu yra ${dalikliai}`;
 }
 
-function dalmuo(num) {
-    if (typeof num !== 'number' || !isFinite(num)) {
-        return `ERROR: turi buti tik sveikieji skaiciai.`
-    }
+console.log(dalinasiIsSveikujuSkaiciu(30));
+console.log(dalinasiIsSveikujuSkaiciu(10));
+console.log(dalinasiIsSveikujuSkaiciu('stogas'));
+console.log(dalinasiIsSveikujuSkaiciu(5.4));
+console.log(dalinasiIsSveikujuSkaiciu(-10));
 
-    let daliklis = 0;
-    for (i = 2; i < num; i++) {
-        if (num % i === 0) {
-            daliklis++;
-        }
-    } return `Argumentas turi ${daliklis} sveikuosius skaicius.`;
-}
-
-// Patikrinimas
-s4 = 6;
-console.log(dalmuo(s4));
-s4 = 12;
-console.log(dalmuo(s4));
-*/
 
 console.log("---7---");
 //7. Parašyti funkciją, kuri priimtų vieną kintamąjį - tekstą. Funkcija turi išvesti tekstą į
@@ -149,28 +115,53 @@ console.log(p1);
 
 console.log("---8---");
 
-/*8. Parašyti funkciją telefonoNumeris, kuri priima vieną kintamąjį – masyvą su 10 skaičių
-jame. Funkcija turi grąžinti telefono numerį tokiu formatu - "(XXX) XXX-XXXX".
+//8. Parašyti funkciją telefonoNumeris, kuri priima vieną kintamąjį – masyvą su 10 skaičių
+//jame. Funkcija turi grąžinti telefono numerį tokiu formatu - "(XXX) XXX-XXXX".
 
-
-function telefonoNumeris([skaitukai]) {
-    const skaitukai = [0,1,2,3,4,5,6,7,8,9]
-    for (i = 0; i <10; i++) {
-         a = console.log(Math.floor(Math.random()*3))
-         b = console.log(Math.floor(Math.random()*3))
-         c = console.log(Math.floor(Math.random()*4))
-         
-         
-         ;}
-    return `(${a}) ${b} - ${c}`
+function telefonoNumeris(a) {
+  if (a.length !== 10) {
+    return "Error: funkcijai turi buti pateiktas 10 skaiciu masyvas";}
+    let telNr = "";
+  for (let i = 0; i < a.length; i++) {
+    const number = a[i];
+    
+    telNr += number;
+    
+  }
+  return `(${a[0]}${a[1]}${a[2]}) ${a[3]}${a[4]}${a[5]} - ${a[6]}${a[7]}${a[8]}${a[9]}`;
 }
- let b1 = telefonoNumeris(2,4,5,6,7,8,9,0,1)
- console.log(b1);
-*/
+console.log(telefonoNumeris([1, 2, 3, 4, 5, 1, 2, 8,8]));
+console.log(telefonoNumeris([1, 2, 3, 4, 5, 1, 2, 8,0,8]));
 
-console.log("---9---");
-//9. Parašyti funkciją, kuri priimtų du kintamuosius - tekstus. Palyginti kuris tekstas yra
-//ilgesnis.
+console.log('------------------');
+
+// function telefonoNumeris(arr) {
+//   if (typeof arr !== "object") {
+//     return "Error: funkcijai turi buti pateiktas masyvas";
+//   }
+//   if (arr.length !== 10) {
+//     return "Error: funkcijai turi buti pateiktas 10 skaiciu masyvas";
+//   }
+//   let telNr = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     const number = arr[i];
+//     if (typeof number !== "number") {
+//       return "Error: Masyva turi sudaryt desimt skaiciu.";
+//     }
+//     if (number >= 10 || number < 0) {
+//       return "Error: Visu masyve nurodytu skaiciu reiksmes turi buti nuo 0 iki 9.";
+//     }
+//     telNr += number;
+//   }
+//   return `(${telNr[0] + telNr[1] + telNr[2]}) ${
+//     telNr[4] + telNr[5] + telNr[6]
+//   }-${telNr[7] + telNr[8] + telNr[9]}`;
+// }
+
+// console.log(telefonoNumeris([10, 20, 30, 40, 50, 1, 2, 3, 4]));
+// console.log("---9---");
+// //9. Parašyti funkciją, kuri priimtų du kintamuosius - tekstus. Palyginti kuris tekstas yra
+// //ilgesnis.
 
 function TekstuPalyginimas(a, b) {
   typeof a === "string";
@@ -182,11 +173,33 @@ function TekstuPalyginimas(a, b) {
     return `Pirmasis tekstas yra trumpesnis`;
   }
 }
-let t1 = TekstuPalyginimas('ne', 'toks')
+let t1 = TekstuPalyginimas("ne", "toks");
 console.log(t1);
-
 
 console.log("---10---");
 //10. Parašyti funkciją, kuri priimtų vieną kintamąjį - tekstą. Suskaičiuoti, kiek tekste yra ‚a‘
 //raidžių.
+function aRaidesSkaiciavimas(tekstas) {
+  let atskirtiRaides = tekstas.split("");
+  let kiekR = 0;
+  for (let i = 0; i < tekstas.length; i++) {
+    if (atskirtiRaides[i] === "a") {
+      kiekR++;
+    }
+  }
+  return `${kiekR}`;
+}
+p1 = aRaidesSkaiciavimas("ci yra asaka");
+console.log(p1);
 
+console.log("---10.1---");
+
+const tekstas = 'daugdaugzodeliuciairdabar';
+let kiekis=0;
+for (let i = 0; i < tekstas.length; i++) {
+  if (tekstas [i]==='a') {
+    kiekis++
+  }
+  
+}
+console.log('Tekste a raidziu yra:' , kiekis);
