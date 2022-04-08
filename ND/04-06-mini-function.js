@@ -65,6 +65,7 @@ function skSuma(a) {
     let sudeta = 0;
     for (i = 1; i <= a; i++) {
       sudeta += i;
+      
     }
     return `nuo 1 iki ${a} skaiciu suma lygi ${sudeta}`;
   } else {
@@ -203,3 +204,4 @@ for (let i = 0; i < tekstas.length; i++) {
   
 }
 console.log('Tekste a raidziu yra:' , kiekis);
+
