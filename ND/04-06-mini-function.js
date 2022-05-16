@@ -160,7 +160,7 @@ console.log('------------------');
 // }
 
 // console.log(telefonoNumeris([10, 20, 30, 40, 50, 1, 2, 3, 4]));
-// console.log("---9---");
+// console.log("---9---"
 // //9. Parašyti funkciją, kuri priimtų du kintamuosius - tekstus. Palyginti kuris tekstas yra
 // //ilgesnis.
 
