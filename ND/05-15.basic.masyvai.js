@@ -162,13 +162,107 @@ console.log(masD);
 
 const unikalus = new Set(masD).size;
 console.log(unikalus);
-const kas = unikalus.values()
+
 
 
 // 5. Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. Masyvų ilgiai 100. Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
 console.log('----------5----------');
+const arr1 =[];
+const arr2 = [];
+for (let i = 0; i < 10; i++) {
+    arr1.push(rand(1,9));
+    arr2.push(rand(1,9));
+    
+    
+}
+const UnikArr1 = new Set(arr1)
+    const UnikArr2 = new Set(arr2)
+
+console.log(arr1);
+// console.table(UnikArr1);
+console.log(arr2);
+// console.table(UnikArr2);
+
 // 6. Sugeneruokite masyvą, kuris būtų sudarytas iš reikšmių, kurios yra pirmame 6 uždavinio masyve, bet nėra antrame 6 uždavinio masyve.
+console.log('----------6----------');
+
+
+// const arr3 = [];
+// const arr4 = []
+
+// for (let i = 0; i <arr1.length; i++) {
+//     for (let k = 0; k < arr2.length; k++) {
+//         if(arr2[k] === arr1[i]) {
+//             arr3.push(arr1[i]);
+//             break;
+//         }
+      
+        
+//     }
+// }
+
+// console.log(arr3);
+
+// const filterMasyvas = arr1.filter(v => -1 != arr2.indexOf(v));
+// const arr3 =[];
+// const m = arr1.length - filterMasyvas.length
+
+// for(let i = 0; i < m; i++){
+//         if (i === filterMasyvas[i]){
+//             continue;
+//         } else{
+//             arr3.push(arr1[i])
+//         }
+// }
+// console.log(filterMasyvas)
+// console.log(arr3);
+
 // 7. Sugeneruokite masyvą iš elementų, kurie kartojasi abiejuose 6 uždavinio masyvuose.
+console.log('----------7----------');
+
+
 // 8. Sugeneruokite masyvą, kurio indeksus sudarytų pirmo 6 uždavinio masyvo reikšmės, o jo reikšmės iš būtų antrojo masyvo.
+console.log('----------8----------');
+
+const longSet1= new Set() // tik unikalios reiksmes
+
+do {
+    longSet1.add(rand(100,999));
+}while (longSet1.size <100);
+const longArray = [...longSet1]
+
+
+const longSet2= new Set() // tik unikalios reiksmes
+
+do {
+    longSet2.add(rand(100,999));
+}while (longSet2.size <100);
+const longArray2 = [...longSet2]
+
+ const freakArray= [];
+
+ longArray.forEach((v,i) => {
+     freakArray[v] = longArray2[i];
+ })
+
+console.log(longArray);
+console.log(freakArray);
+
+
 // 9. Sugeneruokite 10 skaičių masyvą pagal taisyklę: Du pirmi skaičiai- atsitiktiniai nuo 5 iki 25. Trečias, pirmo ir antro suma. Ketvirtas- antro ir trečio suma. Penktas trečio ir ketvirto suma ir t.t.
+console.log('----------9----------');
+const ma = [rand(5,25), rand(5,25)];
+
+for (let i = 2; i < 10; i++) { // woooww!!!! nes turim jau pozicijas 0 ir 1, ziureti i ma masyva
+    ma.push(ma[i-1] + ma[i-2]);
+    
+}
+
+console.table(ma);
+
+
+
+
+
+
 
