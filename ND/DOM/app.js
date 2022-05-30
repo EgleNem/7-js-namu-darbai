@@ -27,3 +27,10 @@ AllNew.forEach(AllNew =>{
     AllNew.style = 'text-decoration: underline';
 
 })
+// Suskaičiuoti kiek yra gyvūnų kategorijų ir žirafų (jos yra ul tagai);
+const animals  = document.querySelectorAll('[class~="animals"].ul')
+console.log(animals);
+
+// const AllZirafos  = document.querySelectorAll('[class~="new"]')
+// console.log(AllNew);
+

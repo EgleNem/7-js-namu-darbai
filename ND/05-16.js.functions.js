@@ -214,3 +214,47 @@ while(primeSum(sqArray) < 70){
 console.table(sqArray);
 
 console.log(primeSum(sqArray));
+
+
+let data=7;
+while(data>=0) {
+  if(data<=5) {
+    data--;
+    continue;
+  }
+  console.log(data);
+  data--;
+}
+
+let zodis = "Programavimas";
+console.log(zodis.charAt(4))
+
+let zodisp="MokymasisMokykloje";
+console.log(zodisp.indexOf('M'))
+
+var x=1; 
+    var y=2;
+    console.log("Atsakymas: "+x+y)
+
+    var i = 0;
+    var suma = 0;
+    while (i < 20) {
+        suma = suma + 1;
+    }
+   
+    console.log(suma);
+
+    const arr = [5, 4, 3, 2, 1];
+    arr.forEach((x,y) => {
+        console.log(y)
+    });
+
+    const arr2 = [5, 4, 3, 2, 1];
+
+    arr2.forEach((x) => {
+        var suma=suma + x;
+    });
+    
+    console.log(suma);
+
+    console.log('-----9----');

@@ -198,3 +198,23 @@ function rand1(min,max) {
 // 7. Naudokite funkcija rand(). Sukurkite tris kintamuosius su atsitiktinėm reikšmėm nuo 0 iki 100. Paskaičiuokite jų aritmetinį vidurkį. Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra mažesnės nei 10 arba didesnės nei 90. Abu vidurkius atspausdinkite su console.log()
 
 // 30 EILUCIU IF 
+
+console.log('-----9----');
+
+
+
+
+    // let i2 = 0;
+    // let suma = 0;
+    // while (i < 20) {
+    //     suma = suma + 1;
+    // }
+   
+    // console.log(suma);
+
+    const arr = [5, 4, 3, 2, 1];
+    arr.forEach((x,y) => {
+        console.log(y)
+    });
+
+  

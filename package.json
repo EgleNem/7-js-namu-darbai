@@ -113,7 +113,7 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
-    "dev": "nodemon ./DOM/app.js",
+    "dev": "nodemon ./ND/05-04-001.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
